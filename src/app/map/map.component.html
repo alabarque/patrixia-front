@@ -1,1 +1,21 @@
-<p>map works!</p>
+<div>
+    <input [(ngModel)]='location1' type='text'>
+    <button (click)='findCoordinatesLocation1()'>Buscar</button>
+</div>
+<div>
+    <input [(ngModel)]='location2' type='text'>
+    <button (click)='findCoordinatesLocation2()'>Buscar</button>
+</div>
+<div>
+    <p>Costo por Kilometro:</p> 
+    <input [(ngModel)]='costPerKm' type='number'>
+</div>
+<div>
+    <button (click)='calculateCost()'>Calcular</button>
+</div>
+<div>
+    <label *ngIf='distance > 0'>{{distance}}</label>
+</div>
+<div>
+    <label *ngIf='cost > 0'>{{cost}}</label>
+</div>
